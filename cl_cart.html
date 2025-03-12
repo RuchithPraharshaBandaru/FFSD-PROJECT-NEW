@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+         @import url(https://fonts.googleapis.com/css?family=Space%20Grotesk);
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+@import url(https://fonts.googleapis.com/css?family=Inter);
+   
+
+    body {
+        text-align: center;
+        font-family: 'Poppins';
+      
+    }
+    
+
+    .nav-bar{
+    height:60px;
+    width:100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display:flex;
+    justify-content: space-evenly;
+    font-family: 'Space Grotesk'
+}
+.logo{
+    height:24px ;
+    width:105px ;
+}
+
+.middlepart{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width :326px;
+    height :24px ;
+    font-family: 'Space Grotesk';
+    gap:40px;
+}
+.Home{
+    width:38px;
+    height:24px;
+    font-weight: 500;
+    font-size: 14px;
+    color:#141718;
+    
+}
+.shop,.product{
+    width:38px;
+    height:24px;
+    font-weight: 500;
+    font-size: 14px;
+    color:#6C7275;
+    
+
+}
+.contact{
+    width:76px;
+    height:24px;
+    font-weight: 500;
+    font-size: 14px;
+    color:#6C7275;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    
+}
+#search,#prof,#img_shop{
+    height: 20px;
+    width:20px ;
+}
+#img_shop_2{
+    height: 4px;
+    width: 6px;
+}
+.lastpart{
+    height:28px;
+    width:138px ;
+    display:flex ;
+    justify-content: space-evenly;
+}
+
+#shop_2{
+    position:relative;
+   right:22px ;
+   bottom:9px;
+}
+#cnt{
+    height:20px ;
+    width:20px ;
+    color:white ;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    background-color: #141718;
+    border-radius: 50%;
+    position:relative;
+    right:23px
+}
+
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            gap:30px ;
+            
+        }
+        #cart{
+
+font-size:54px ;
+font-family:'Poppins';
+display:flex;
+justify-content: center;
+text-align: center;
+margin-bottom:34px ;
+margin-top:0px;
+}
+        .progress-bar{
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    gap: 35px;
+    font-family: 'Inter'
+}
+
+.shop_cart{
+    display: flex;
+    height:66px;
+    width:256px;
+    align-items: center;
+    gap: 17px;
+    color: #45B26B;
+    margin-bottom:26px ;
+    border-bottom: 2px solid #45B26B;
+}
+.checkout{
+    display: flex;
+    height:66px;
+    width:256px;
+    align-items: center;
+    gap: 17px;
+    color: #45B26B;
+    margin-bottom:26px ;
+    border-bottom: 2px solid #45B26B;
+}
+.ordercomp{
+    display: flex;
+    height:66px;
+    width:256px;
+    align-items: center;
+    gap: 17px;
+    margin-bottom:26px ;
+    border-bottom: 2px solid black;
+
+}
+.check{
+    height:40px;
+    width:40px;
+    background-color: #45B26B;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.tree{
+    height:40px;
+    width:40px;
+    background-color: black;
+    color:white;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+       
+
+        .cart-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .cart-items {
+            border-top: 1px solid #eee;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+
+        .item-image {
+            width: 100px;
+            height: 100px;
+            background: #f5f5f5;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+
+        .quantity-control button {
+            padding: 5px 10px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .quantity-control input {
+            width: 40px;
+            text-align: center;
+            border: none;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+        }
+
+        .remove-btn {
+            color: #666;
+            border: none;
+            background: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .cart-summary {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .shipping-options {
+            margin: 20px 0;
+        }
+
+        .shipping-option {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        .total {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .coupon-section {
+            margin-top: 30px;
+        }
+
+        .coupon-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .coupon-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+
+        .apply-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 1px solid #000;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <div class="logo">LOGO</div>
+        <div class="middlepart">
+            <div class = "Home"><b>Home</b></div> 
+            <div class = "shop"><b>Shop</b></div>
+            <div class = "product"><b>Product</b></div>
+            <div class = "contact"><b>Contact Us</b></div>
+        </div>
+        <div class="lastpart">
+            <img id = "search"src = "search.png">
+            <img id = "prof"src = "prof.png">
+            <span id = "shop">
+            <img  id = "img_shop"src = "shop.png">
+            </span>
+            <span id = "shop_2">
+                <img  id = "img_shop_2"src = "shop_2.png">
+                </span>
+            <span id = "cnt">1</span> 
+        </div>
+    </div>
+    
+    <div class="container">
+      
+
+        <b id = "cart"> Cart </b>
+        <div class="progress-bar">
+            <div class="shop_cart"><div class = "check"><img class ="checkmark"src = "check.png"></div> <b>Shopping cart</b></div>
+            <div class="checkout"><div class ="check"><img class ="checkmark"src = "check.png"></div><b> Checkout details</b></div>
+            <div class="ordercomp"><div class = "tree">3</div><b>Order complete</b></div>
+        </div>
+
+       
+
+        <div class="cart-container">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="item-image"></div>
+                    <div>
+                        <h3>Tray Table</h3>
+                        <p>Color: Black</p>
+                        <button class="remove-btn">✕ Remove</button>
+                    </div>
+                    <div class="quantity-control">
+                        <button>-</button>
+                        <input type="text" value="2">
+                        <button>+</button>
+                    </div>
+                    <div>$38.00</div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-image"></div>
+                    <div>
+                        <h3>Tray Table</h3>
+                        <p>Color: Red</p>
+                        <button class="remove-btn">✕ Remove</button>
+                    </div>
+                    <div class="quantity-control">
+                        <button>-</button>
+                        <input type="text" value="2">
+                        <button>+</button>
+                    </div>
+                    <div>$38.00</div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-image"></div>
+                    <div>
+                        <h3>Table lamp</h3>
+                        <p>Color: Gold</p>
+                        <button class="remove-btn">✕ Remove</button>
+                    </div>
+                    <div class="quantity-control">
+                        <button>-</button>
+                        <input type="text" value="1">
+                        <button>+</button>
+                    </div>
+                    <div>$39.00</div>
+                </div>
+
+                <div class="coupon-section">
+                    <h3>Have a coupon?</h3>
+                    <p>Add your code for an instant cart discount</p>
+                    <div class="coupon-form">
+                        <input type="text" placeholder="Coupon Code" class="coupon-input">
+                        <button class="apply-btn">Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h3>Cart summary</h3>
+                <div class="shipping-options">
+                    <div class="shipping-option">
+                        <label>
+                            <input type="radio" name="shipping" checked>
+                            Free shipping
+                        </label>
+                        <span>$0.00</span>
+                    </div>
+                    <div class="shipping-option">
+                        <label>
+                            <input type="radio" name="shipping">
+                            Express shipping
+                        </label>
+                        <span>+$15.00</span>
+                    </div>
+                    <div class="shipping-option">
+                        <label>
+                            <input type="radio" name="shipping">
+                            Pick Up
+                        </label>
+                        <span>+$21.00</span>
+                    </div>
+                </div>
+                <div class="total">
+                    <span>Total</span>
+                    <span>$345.00</span>
+                </div>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
